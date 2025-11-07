@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Linked List Virtual Lab — Train Lab</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <h1>Linked List Virtual Lab</h1>
+      <p class="subtitle">
+        Visualize singly linked lists with a train — insert, delete, search.
+        Digestible learning, minimal bloating.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="controls">
+        <h2>Control Panel</h2>
+
+        <div class="control-row">
+          <input
+            id="valueInput"
+            type="text"
+            placeholder="Value (e.g., 42 or 'A')"
+          />
+        </div>
+
+        <div class="control-row">
+          <button id="insertBeginningBtn" class="btn">
+            Insert at Beginning
+          </button>
+          <button id="insertEndBtn" class="btn">Insert at End</button>
+          <input id="posInput" type="number" min="0" placeholder="Position" />
+          <button id="insertAtBtn" class="btn">Insert at Position</button>
+        </div>
+
+        <div class="control-row">
+          <button id="deleteBeginningBtn" class="btn danger">
+            Delete Beginning
+          </button>
+          <button id="deleteEndBtn" class="btn danger">Delete End</button>
+          <button id="clearBtn" class="btn ghost">Clear List</button>
+        </div>
+
+        <div class="control-row search-row">
+          <input id="searchInput" type="text" placeholder="Search value" />
+          <button id="searchBtn" class="btn">Search</button>
+          <button id="resetHighlightBtn" class="btn ghost">Reset</button>
+        </div>
+
+        <div class="control-row small">
+          <label
+            ><input id="animateToggle" type="checkbox" checked />
+            Animations</label
+          >
+          <span class="spacer"></span>
+          <button id="downloadStateBtn" class="btn ghost">
+            Download State (JSON)
+          </button>
+        </div>
+
+        <div class="note">
+          <strong>Tip:</strong> Use small values for clarity. This is a
+          transient simulation — state resets on refresh.
+        </div>
+      </section>
+
+      <section class="visualization" aria-live="polite">
+        <h2>Train Visualization</h2>
+        <div id="trainArea" class="train-area">
+          <!-- Engine + carriages will be rendered here -->
+        </div>
+        <div id="listInfo" class="list-info">
+          List length: <span id="lengthSpan">0</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>
+        Built for learning linked lists — UI + logic + integration. Deploy to
+        GitHub Pages or Netlify.
+      </div>
+      <div class="logout-reminder">Don't forget to log out when done 🔒</div>
+    </footer>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
